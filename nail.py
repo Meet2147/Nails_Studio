@@ -15,7 +15,9 @@ import base64
 def load_lottiefile(filepath: str):
     with open(filepath, 'r') as f:
         return json.load(f)
-beauty = load_lottiefile("D://Development//Meet//Python_Dev//Projects69//Python101//beauty.json")
+path = os.getcwd()
+
+beauty = load_lottiefile(path + "\beauty.json")
 st.title("Welcome to Nail Vali")
 st_lottie(beauty,
             speed=1,
